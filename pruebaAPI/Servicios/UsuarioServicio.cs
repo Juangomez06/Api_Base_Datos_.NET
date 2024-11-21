@@ -44,6 +44,8 @@ namespace pruebaAPI.Servicios
                 userActual.SecondsLastName = user.SecondsLastName;
                 userActual.Age = user.Age;
                 userActual.Phone = user.Phone;
+                userActual.Correo_i = user.Correo_i;
+                userActual.Correo_p = user.Correo_p;
 
                 await context.SaveChangesAsync();
             }

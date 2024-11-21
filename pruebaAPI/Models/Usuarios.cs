@@ -13,6 +13,8 @@ namespace pruebaAPI.Models
         public string SecondsLastName { get; set; }
         public double Age { get; set; }
         public string Phone { get; set; }
+        public string? Correo_i { get; set; }
+        public string Correo_p { get; set; }
 
         [JsonIgnore]
         public virtual ICollection<Empleados> Empleado { get; set; } = new List<Empleados>();

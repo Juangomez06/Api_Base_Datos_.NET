@@ -24,6 +24,8 @@ namespace pruebaAPI
                 user.Property(p => p.SecondsLastName).HasMaxLength(150).HasColumnName("seconds_last_name");
                 user.Property(p => p.Age).IsRequired().HasColumnName("age");
                 user.Property(p => p.Phone).HasMaxLength(20).HasColumnName("phone");
+                user.Property(p => p.Correo_i).HasMaxLength(40).HasColumnName("correo_i");
+                user.Property(p => p.Correo_p).HasMaxLength(40).HasColumnName("correo_p");
             });
 
             modelBuilder.Entity<Empleados>(empleado =>

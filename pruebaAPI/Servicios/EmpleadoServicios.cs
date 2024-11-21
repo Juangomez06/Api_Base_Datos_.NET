@@ -28,7 +28,10 @@ namespace pruebaAPI.Servicios
                 {
                     Nombre = e.Usuario.Name,
                     Apellido = e.Usuario.LastName,
-                    Profesion = e.Profesional
+                    Correo_i = e.Usuario.Correo_i,
+                    Correo_p = e.Usuario.Correo_p,
+                    Profesion = e.Profesional,
+                    
                 })
                 .ToList();
         }
@@ -37,7 +40,7 @@ namespace pruebaAPI.Servicios
         public IEnumerable<UsuarioEmpleadoDto> GetProAlmacenado()
         {
             var resultado = context.Set<UsuarioEmpleadoDto>()
-                .FromSqlRaw("EXEC ObtenerUsuariosEmpleados")
+                .FromSqlRaw("EXEC ObtenerUsersCorreos")
                 .ToList();
             return resultado;
         }
